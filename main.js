@@ -1,4 +1,5 @@
 //Answer 1
+//Show me how to calculate the average price of all items.
 //to find all prices and place them in a new array
 function prices(items) {
   var allPrices = [];
@@ -18,6 +19,7 @@ var answerTo1 = totalPrice/allPrices.length;
 document.getElementById("answer1").innerHTML ="The average price is $" + answerTo1.toFixed(2);
 
 //Answer 2
+//Show me how to get an array of items that cost between $14.00 and $18.00 USD
 //from the items array, obtain the items priced between "14-18"
 //call out the items names from the result of the previous question
 //to pull out items with price btwn $14 and $18
@@ -25,7 +27,6 @@ var btwnPrices = items.filter(function(x) {return (x.price > 14.00 && x.price < 
 var btwnList = btwnPrices.map(function(a) {return a.title;});
 document.getElementById("answer2").innerHTML = btwnList;
 
-//str = arr.join([separator = ','])
 
 //Answer 3
 //Which item has a "GBP" currency code? Display it's name and price
@@ -33,10 +34,37 @@ document.getElementById("answer2").innerHTML = btwnList;
 //Display its name and price
 
 //to find object of array with GBP then to map out title and price of the item
-var gbpItem = items.filter(function(x) {return (x.currency_code === "GBP")});
-var gbpTitle = gbpItem.map(function(a) {return a.title;});
-var gbpPrice = gbpItem.map(function(a) {return a.price;});
+var gbpItems = items.filter(function(x) {return (x.currency_code === "GBP")});
+var gbpTitle = gbpItems.map(function(a) {return a.title;});
+var gbpPrice = gbpItems.map(function(a) {return a.price;});
 document.getElementById("answer3").innerHTML = gbpTitle + " costs " + gbpPrice;
 
 
 //Answer 4
+//Display a list of all items who are made of wood
+//Find object of material with wood
+//get object title and say "is made of wood" at the end for each item.
+//var woodItems = items.filter(function(x) {return x.material});
+var woodMade = items.map(function(x) {return x.materials})
+var woodItems = woodMade.filter(function(y) {return [16] === "wood"});
+console.log(woodItems)
+
+var woodTitle = woodItems.map(function(a) {return a.title;});
+document.getElementById("answer4").innerHTML = woodTitle + "made of wood."
+
+//Answer 5
+//Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
+//find of the materials, which has 8 or more objects in the array
+//display the items through mapping HOF
+
+// var materialsArray = items.filter(function (x) {return [x] === "wood"});
+// var materialsNumber = materialsArry.map(function (x) {return [x].length > 4 })
+
+
+
+
+//Anser 6
+//How many items were made by their sellers?
+var whoMade = items.map(function (x) {return x.who_made});
+var selfMade = whoMade.filter(function (y) {return y === "i_did"});
+document.getElementById("answer6").innerHTML = selfMade.length + " were made by their sellers";
