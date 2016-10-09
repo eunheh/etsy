@@ -1,16 +1,19 @@
 *{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: #4F4F4F;
 }
 
 body {
   max-width: 1100px;
+
 }
 
 .main {
   background-color: #EEEEEE;
   text-align: center;
   margin-top: -36px;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -24,7 +27,11 @@ h1 {
 h3 {
   font-size: 32px;
   font-family: 'Roboto Slab', serif;
-  padding-bottom: 50px;
+  padding: 100px 50px 60px;
+  width: 100%;
+  border-bottom: 1px solid #E5E5E5;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
 }
 
 .answer {
