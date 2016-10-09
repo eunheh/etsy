@@ -1,17 +1,5 @@
-//var apple = items[2].price;
-
 //Answer 1
-//pull out all the price properties then add them together for total price
-//use the sum and divide that into the total number of objects in the array
-var items = [
-    { "title" : 'eggs', 'price' : 67},
-    { "title" : 'cucumber', 'price' : 40},
-    { "title" : 'Apple', 'price' : 15},
-    { "title" : 'bacon', 'price' : 18},
-    { "title" : 'Bagel', 'price' : 13},
-    { "title" : 'Cheese', 'price' : 38},
-];
-
+//to find all prices and place them in a new array
 function prices(items) {
   var allPrices = [];
   for (var i = 0; i < items.length; i++) {
@@ -19,59 +7,36 @@ function prices(items) {
   }
   return allPrices;
 }
+//to add all the prices togther
 var allPrices = prices(items);
 var totalPrice = 0;
 for (var x = 0; x < allPrices.length; x++) {
     totalPrice += allPrices[x];
 }
-//The average price is $answer1
-var answer1 = totalPrice/allPrices.length;
-console.log(answer1.toFixed(2))
+//to divide the total by the number of objects in the array
+var answerTo1 = totalPrice/allPrices.length;
+document.getElementById("answer1").innerHTML ="The average price is $" + answerTo1.toFixed(2);
 
 //Answer 2
 //from the items array, obtain the items priced between "14-18"
 //call out the items names from the result of the previous question
-var items = [
-    { 'title' : 'eggs', 'price' : 67, 'currency_code' : "USD"},
-    { 'title' : 'cucumber', 'price' : 40, 'currency_code' : "GBP"},
-    { 'title' : 'Apple', 'price' : 15, 'currency_code' : "USD"},
-    { 'title' : 'bacon', 'price' : 16, 'currency_code' : "USD"},
-    { 'title' : 'Bagel', 'price' : 7, 'currency_code' : "USD"},
-    { 'title' : 'Cheese', 'price' : 38, 'currency_code' : "USD"},
-];
+//to pull out items with price btwn $14 and $18
+var btwnPrices = items.filter(function(x) {return (x.price > 14.00 && x.price < 18.00)});
+var btwnList = btwnPrices.map(function(a) {return a.title;});
+document.getElementById("answer2").innerHTML = btwnList;
 
-var btwnPrices = items.filter(function(x) {return (x.price >= 14.00 && x.price <= 18.00)});
-console.log(btwnPrices)
-
-function btwnList(items) {
-  var titleBtwn = [];
-  for (var i = 0; i < items.length; i++) {
-      btwnPrices.push(items[i].title);
-  }
-  return titleBtwn;
-};
-
-console.log(btwnList.toString);
-//lines = foo.value.split(/\r\n|\r|\n/g);
-
+//str = arr.join([separator = ','])
 
 //Answer 3
 //Which item has a "GBP" currency code? Display it's name and price
 //Find property with GBP
 //Display its name and price
-var items = [
-    { 'title' : 'eggs', 'price' : 67, 'currency_code' : "USD"},
-    { 'title' : 'cucumber', 'price' : 40, 'currency_code' : "GBP"},
-    { 'title' : 'Apple', 'price' : 15, 'currency_code' : "USD"},
-    { 'title' : 'bacon', 'price' : 16, 'currency_code' : "USD"},
-    { 'title' : 'Bagel', 'price' : 7, 'currency_code' : "USD"},
-    { 'title' : 'Cheese', 'price' : 38, 'currency_code' : "USD"},
-];
 
+//to find object of array with GBP then to map out title and price of the item
 var gbpItem = items.filter(function(x) {return (x.currency_code === "GBP")});
-var answer4 = gbpItem.map(function(a) {return a.title;});
-var answer3 = gbpItem.map(function(a) {return a.price;});
-console.log(answer3 + " costs " + answer4)
+var gbpTitle = gbpItem.map(function(a) {return a.title;});
+var gbpPrice = gbpItem.map(function(a) {return a.price;});
+document.getElementById("answer3").innerHTML = gbpTitle + " costs " + gbpPrice;
 
 
 //Answer 4
