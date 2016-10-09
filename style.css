@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1100px;
+}
+
+.main {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 75px;
+}
+
+.answer {
+  font-size: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.bottom {
+  background-color: #4B484F;
+  color: white;
+  font-size: 12px;
+}
