@@ -73,4 +73,4 @@ document.getElementById("answer5").innerHTML = eightMat1 + "<br><br>"+ eightMat2
 //How many items were made by their sellers?
 var whoMade = items.map(function (x) {return x.who_made});
 var selfMade = whoMade.filter(function (y) {return y === "i_did"});
-document.getElementById("answer6").innerHTML = selfMade.length + " were made by their sellers";
+document.getElementById("answer6").innerHTML = selfMade.length + " bananas were made by their sellers";
