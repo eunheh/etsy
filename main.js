@@ -50,7 +50,7 @@ document.getElementById("answer3").innerHTML = gbpTitle + " costs " + gbpPrice;
 // var woodMade = items.filter(function(x) {return x.materials});
 var woodItems = items.filter(function(x) {return x.materials.includes("wood")});
 var woodTitle = woodItems.map(function(a) {return a.title;});
-document.getElementById("answer4").innerHTML = woodTitle.join(" is made of wood <br> <br> ");
+document.getElementById("answer4").innerHTML = woodTitle.join(" is made of wood <br> <br>");
 
 //Answer 5
 //Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
