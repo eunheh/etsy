@@ -20,4 +20,4 @@
   * Main HOFs used in this project were filters and maps
 
 Following is a link to the Etsy Items page:
-[Etsy Items](https://github.com/eunheh/etsy)
+[Etsy Items](https://eunheh.github.io/etsy/)
