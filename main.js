@@ -59,9 +59,9 @@ document.getElementById("answer4").innerHTML = woodTitle.join(" is made of wood 
 var eightMat = items.filter(function(x) {return x.materials.length > 8});
 var matTitle = eightMat.map(function(a) {return a.title;});
 var matDetail = eightMat.map(function(y) {return y.materials})
-var eightMat1 = eightMat[0].title + " has " + (matDetail[0].length) + " materials <br> <br>"+ matDetail[0].join("<br> <br>")
-var eightMat2 = eightMat[1].title + " has " + (matDetail[1].length) + " materials <br> <br>"+ matDetail[1].join("<br> <br>")
-document.getElementById("answer5").innerHTML = eightMat1 + eightMat2;
+var eightMat1 = eightMat[0].title + " has " + (matDetail[0].length) + " materials <br>"+ matDetail[0].join("<br>")
+var eightMat2 = eightMat[1].title + " has " + (matDetail[1].length) + " materials <br><br>"+ matDetail[1].join("<br>")
+document.getElementById("answer5").innerHTML = eightMat1 + "<br><br>"+ eightMat2;
 
 // + matDetail.length + matDetail;
 
