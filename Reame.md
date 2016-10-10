@@ -18,3 +18,6 @@
 4. Functions and High Order Functions (HOFs)
   * Basic order of operations PEMDAS
   * Main HOFs used in this project were filters and maps
+
+Following is a link to the Etsy Items page:
+[Etsy Items](https://github.com/eunheh/etsy)
